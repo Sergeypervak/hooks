@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import somePlugin from 'plugin';
+// import somePlugin from 'plugin';
 
 
 
@@ -17,11 +17,11 @@ export const Effect = () => {
     return () => {document.removeEventListener('click', handler)}
     }, [])
     
-    useEffect(function unitPlugin () {
-        somePlugin.init();
+    // useEffect(function unitPlugin () {
+    //     somePlugin.init();
 
-        return () => {somePlugin.destroy()}
-    }, [])
+    //     return () => {somePlugin.destroy()}
+    // }, [])
     
     useEffect(() => {}, [])
 
