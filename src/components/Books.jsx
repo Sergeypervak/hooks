@@ -3,10 +3,15 @@ import {CustomContext} from '../Context'
 
 import { Book } from './Book';
 
-function Books () {
-const {} = useContext(CustomContext);
+export function Books () {
+const { books = [] } = useContext(CustomContext);
 
-    return <div className='books'></div>
+    return <div className='books'>
+{
+  books.map  (book => {
+    <Book key={book.id} {...book} />
+  })}
+
+    </div>
 }
 
-export {Books};
