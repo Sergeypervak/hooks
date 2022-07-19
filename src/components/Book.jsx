@@ -1,3 +1,8 @@
+import {CustomContext} from '../Context'
+import React, {useContext} from 'react'
+
 export function Book(props) {
-    return <h2>{props.title}</h2>
+   const {removeBook} = useContext(CustomContext)
+    
+    return <h2 onClick={() => removeBook(props.id)}>{props.title}</h2>
 }
