@@ -19,7 +19,14 @@ const removeBook = (id) =>  {
     setBooks(books.filter(book => book.id !==id )) 
 }   
 
-return <CustomContext.Provider>
+const value = {
+    books,
+    addBook,
+    removeBook,
+
+}
+
+return <CustomContext.Provider value={value}>
     {props.children}
 </CustomContext.Provider>
 
